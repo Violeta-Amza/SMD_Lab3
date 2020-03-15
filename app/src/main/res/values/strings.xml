@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Lab3</string>
-    <string name="start_service">START SERVICE</string>
-    <string name="end_service">END SERVICE</string>
-    <string name="get_current_data">GET CURRENT DATA</string>
-    <string name="get_money">GET MONEY</string>
-</resources>
