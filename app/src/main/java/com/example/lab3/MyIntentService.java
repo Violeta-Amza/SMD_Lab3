@@ -47,7 +47,7 @@ public class MyIntentService extends IntentService {
                 final int minValue = intent.getIntExtra(EXTRA_MIN_VALUE, 10);
                 final int maxValue = intent.getIntExtra(EXTRA_MAX_VALUE, 10000);
                 Log.d(DEBUG_TAG, "onHandleIntent: minValue-" + minValue + " maxValue-" + maxValue);
-                handleActionFoo(minValue, maxValue);
+                handleActionGiveMoney(minValue, maxValue);
             }
         }
     }
@@ -56,7 +56,7 @@ public class MyIntentService extends IntentService {
      * Handle action GIVE MONEY in the provided background thread with the provided
      * parameters.
      */
-    private void handleActionFoo(int minValue, int maxValue) {
+    private void handleActionGiveMoney(int minValue, int maxValue) {
 
         String str = String.valueOf(ThreadLocalRandom.current().nextInt(minValue, maxValue));
         Intent intent = new Intent();

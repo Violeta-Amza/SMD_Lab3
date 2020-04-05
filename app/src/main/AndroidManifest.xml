@@ -19,16 +19,15 @@
 
         <receiver
             android:name=".MyBroadcastReceiver"
-            android:enabled="true"
-            android:exported="true"></receiver>
+            android:enabled="true">
+        </receiver>
 
         <service
             android:name=".MyIntentService"
             android:exported="false" />
         <service
             android:name=".MyBoundService"
-            android:enabled="true"
-            android:exported="true" />
+            android:enabled="true"/>
         <service
             android:name=".MyStartedService"
             android:enabled="true"

@@ -24,7 +24,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         bindServices();
+        initializeUIComponents();
+    }
+
+    /**
+     * startServiceButton :
+     *      start a service
+     *      onStartCommand  call a method which prints a Toast with a message of this format: Bits saved: 973. The number needs to be randomly generated.
+     * endServiceButton
+     *      end the service
+     * getCurrentDataButton
+     *      call service.getCurrentDate()
+     * getMoneyButton
+     *      start a intent service
+     */
+    protected void initializeUIComponents() {
 
         Button startServiceButton = findViewById(R.id.start_service_button);
         Button endServiceButton = findViewById(R.id.end_service_button);
@@ -72,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 startService(intent);
             }
         });
+
     }
 
     @Override
@@ -82,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void bindServices() {
-        bindServicesHelper(myStartedService, myStartedServiceConnection, MyStartedService.class);
         bindServicesHelper(myBoundService, myBoundServiceConnection, MyBoundService.class);
 
     }
@@ -95,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void unbindServices() {
-        unbindService(myStartedServiceConnection);
         unbindService(myBoundServiceConnection);
     }
 
